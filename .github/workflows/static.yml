@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anémona Sync Agency</title>
+  <link rel="icon" href="anemona-logo.png" type="image/png">
+  <style>
+    @font-face {
+      font-family: 'PPNeueMontreal';
+      src: url('PPNeueMontreal-Bold.woff2') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #FBF6E5;
+      color: #222;
+    }
+
+    header {
+      background-color: #EE3569;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'PPNeueMontreal', sans-serif;
+      font-weight: bold;
+      font-size: 2.5em;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1em;
+    }
+
+    nav a {
+      margin: 0 1em;
+      color: #EE3569;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 2em;
+    }
+
+    .hero {
+      background-color: #ffd6e0;
+      padding: 2em;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8em 1.5em;
+      background-color: #EE3569;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #f0f0f0;
+      color: #888;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anémona</h1>
+    <p>Mexa Sync Agency</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre nosotros</a>
+    <a href="#artistas">Artistas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Sumerge tu música en un nuevo mundo de oportunidades</h2>
+    <p>Representamos a artistas independientes y emergentes para licenciar su música en cine, televisión, publicidad y más.</p>
+    <a href="#contacto" class="button">Únete a Anémona</a>
+  </section>
+
+  <section id="sobre">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Anémona es la primera agencia de sincronización musical en México, nuestro objetivo es empoderar a artistas y facilitar licencias musicales justas, creativas y estratégicas para medios audiovisuales, democratizar la música.
+    </p>
+  </section>
+
+  <section id="artistas">
+    <h2>Artistas que representamos</h2>
+    <p>Estamos construyendo un roster de talento fresco y potente. Pronto podrás conocer a nuestros artistas.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Eres artista independiente o trabajas en medios audiovisuales? Nos encantaría hablar contigo.</p>
+    <p>Escríbenos a: <a href="mailto:katearaos@anemonasync.com">katearaos@anemonasync.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anémona Sync Agency. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
