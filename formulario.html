@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="es">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>Registro de Obras - An\'e9mona</title>\
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">\
+  <style>\
+    @font-face \{\
+      font-family: 'PPNeueMontreal-Medium';\
+      src: url('PPNeueMontreal-Medium.otf') format('opentype');\
+    \}\
+\
+    body \{\
+      font-family: 'PPNeueMontreal-Medium', 'Inter', sans-serif;\
+      padding: 2em;\
+      background: #FBF6E5;\
+      margin: 0;\
+    \}\
+\
+    header \{\
+      background-color: #EE3569;\
+      height: 80px;\
+      display: flex;\
+      justify-content: flex-end;\
+      align-items: center;\
+      padding: 0 20px;\
+      position: relative;\
+    \}\
+\
+    header img \{\
+      width: 80px;\
+      height: auto;\
+    \}\
+\
+    h1 \{\
+      color: #EE3569;\
+      font-weight: bold;\
+      font-size: 1.5em;\
+    \}\
+\
+    h2 \{\
+      color: #EA5E28;\
+      font-weight: bold;\
+    \}\
+\
+    h3 \{\
+      color: #EE3569;\
+      font-weight: bold;\
+    \}\
+\
+    .obra, .compositor, .productor, .pregunta \{\
+      background: white;\
+      border-radius: 10px;\
+      padding: 1em;\
+      margin-bottom: 1em;\
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);\
+    \}\
+\
+    label \{\
+      display: block;\
+      margin-top: 10px;\
+      font-weight: 500;\
+      color: #EA5E28;\
+    \}\
+\
+    input, select, textarea \{\
+      width: 100%;\
+      padding: 8px;\
+      border-radius: 6px;\
+      border: 1px solid #ccc;\
+      margin-top: 4px;\
+      font-family: 'Inter', sans-serif;\
+    \}\
+\
+    button \{\
+      margin-top: 1em;\
+      background-color: #EE3569;\
+      color: white;\
+      border: none;\
+      padding: 10px 20px;\
+      border-radius: 6px;\
+      cursor: pointer;\
+      font-family: 'PPNeueMontreal-Medium', 'Inter', sans-serif;\
+      font-weight: 500;\
+    \}\
+\
+    button:hover \{\
+      background-color: #EA5E28;\
+    \}\
+\
+    small \{\
+      color: #888;\
+      font-family: 'Inter', sans-serif;\
+    \}\
+\
+    /* Estilo adicional para el banner */\
+    .banner \{\
+      background-color: #EE3569;\
+      color: white;\
+      padding: 10px 20px;\
+      text-align: center;\
+      font-weight: bold;\
+      margin-bottom: 20px;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <img src="anemona-logo.png" alt="An\'e9mona Logo">\
+  </header>\
+\
+  <h1>Informaci\'f3n de obras</h1>\
+  <label for="numObras">\'bfCu\'e1ntas obras deseas registrar?</label>\
+  <input type="number" id="numObras" min="1">\
+  <button onclick="generarObras()">Generar formulario</button>\
+\
+  <form id="formularioObras"></form>\
+\
+  <script>\
+    function generarObras() \{\
+      const numObras = parseInt(document.getElementById('numObras').value);\
+      const contenedor = document.getElementById('formularioObras');\
+      contenedor.innerHTML = '';\
+\
+      for (let i = 1; i <= numObras; i++) \{\
+        const obraDiv = document.createElement('div');\
+        obraDiv.className = 'obra';\
+        obraDiv.innerHTML = \
+          `<h2>Obra #$\{i\}</h2>\
+          <label>T\'edtulo de la obra</label><input type="text" name="titulo_$\{i\}" required>\
+          <label>G\'e9nero musical</label><input type="text" name="genero_$\{i\}" required>\
+          <label>Duraci\'f3n</label><input type="text" name="duracion_$\{i\}" required>\
+          <label>\'bfEst\'e1 publicada? \'bfD\'f3nde?</label><input type="text" name="publicacion_$\{i\}">\
+          <label>ISRC</label><input type="text" name="isrc_$\{i\}">\
+          <label>ISWC</label><input type="text" name="iswc_$\{i\}">\
+          <div id="compositores_$\{i\}"></div>\
+          <button type="button" onclick="agregarCompositor($\{i\})">+ Agregar compositor</button>\
+          <div id="productores_$\{i\}"></div>\
+          <button type="button" onclick="agregarProductor($\{i\})">+ Agregar productor</button>\
+          \
+          <label>\'bfTienes una versi\'f3n instrumental de tu master?</label>\
+          <select name="version_instrumental_$\{i\}" required>\
+            <option value="s\'ed">S\'ed</option>\
+            <option value="no">No</option>\
+          </select>\
+\
+          <label>\'bfTienes una versi\'f3n TV Mix (Instrumental y Backing Vocals)?</label>\
+          <select name="version_tv_mix_$\{i\}" required>\
+            <option value="s\'ed">S\'ed</option>\
+            <option value="no">No</option>\
+          </select>`;\
+        contenedor.appendChild(obraDiv);\
+      \}\
+\
+      // Pregunta de ayuda visible siempre\
+      const ayudaDiv = document.createElement('div');\
+      ayudaDiv.className = 'pregunta';\
+      ayudaDiv.innerHTML = \
+        `<h3>\'bfNecesitas ayuda para encontrar tu informaci\'f3n?</h3>\
+        <p>No dudes en contactarnos para darte una cotizaci\'f3n personalizada.</p>\
+        <p><strong>Correo:</strong> katearaos@anemonasync.com</p>`;\
+      contenedor.appendChild(ayudaDiv);\
+    \}\
+\
+    function agregarCompositor(index) \{\
+      const contenedor = document.getElementById(`compositores_$\{index\}`);\
+      const compositorDiv = document.createElement('div');\
+      compositorDiv.className = 'compositor';\
+      compositorDiv.innerHTML = \
+        `<h3>Compositor</h3>\
+        <label>Nombre completo</label><input type="text" name="nombre_compositor_$\{index\}[]">\
+        <label>PRO (SACM, ASCAP, etc.)</label><input type="text" name="pro_compositor_$\{index\}[]">\
+        <label>CAE / IPI (opcional)</label><input type="text" name="cae_compositor_$\{index\}[]">\
+        <label>% de titularidad</label><input type="number" name="porcentaje_compositor_$\{index\}[]" required>\
+        <small>Si no sabes tu CAE/IPI, puedes consultarlo con tu PRO o dejarlo en blanco.</small>`;\
+      contenedor.appendChild(compositorDiv);\
+    \}\
+\
+    function agregarProductor(index) \{\
+      const contenedor = document.getElementById(`productores_$\{index\}`);\
+      const productorDiv = document.createElement('div');\
+      productorDiv.className = 'productor';\
+      productorDiv.innerHTML = \
+        `<h3>Productor</h3>\
+        <label>Nombre completo</label><input type="text" name="nombre_productor_$\{index\}[]">\
+        <label>% de titularidad</label><input type="number" name="porcentaje_productor_$\{index\}[]" required>`;\
+      contenedor.appendChild(productorDiv);\
+    \}\
+  </script>\
+</body>\
+</html>\
+}
