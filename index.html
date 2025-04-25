@@ -21,14 +21,14 @@
 
     header {
       background-color: #EE3569;
-      padding: 10em 2em 2em; /* Aumenté el padding superior aún más */
+      padding: 10em 2em 2em;
       text-align: center;
       color: white;
-      height: 60vh; /* Aumenté la altura a 60% de la pantalla */
+      height: 60vh;
     }
 
     header img {
-      width: 50%; /* Mantengo el logo al 50% del ancho del header */
+      width: 50%;
       height: auto;
     }
 
@@ -58,7 +58,7 @@
     }
 
     a.email {
-      color: #007BFF; /* Azul para el correo */
+      color: #007BFF;
       text-decoration: none;
     }
 
@@ -89,6 +89,63 @@
 
     button:hover {
       background-color: #EA5E28;
+    }
+
+    /* Media Queries para hacer la página responsiva */
+    @media (max-width: 768px) {
+      header {
+        padding: 6em 1.5em 1.5em; /* Ajuste del padding para pantallas más pequeñas */
+        height: 50vh; /* Reducir altura */
+      }
+
+      header img {
+        width: 70%; /* Ajustar el logo para pantallas pequeñas */
+      }
+
+      section {
+        padding: 3em 1.5em; /* Menos padding para pantallas pequeñas */
+      }
+
+      h2 {
+        font-size: 1.8em; /* Reducir el tamaño de la fuente de los títulos */
+      }
+
+      p {
+        font-size: 1.1em; /* Reducir el tamaño de la fuente del texto */
+      }
+
+      button {
+        font-size: 1em; /* Reducir el tamaño del botón */
+        padding: 8px 16px; /* Reducir el tamaño del botón */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 4em 1em 1em; /* Ajuste de padding para pantallas muy pequeñas */
+        height: 45vh; /* Reducir aún más la altura */
+      }
+
+      header img {
+        width: 80%; /* Ajustar el logo aún más pequeño */
+      }
+
+      section {
+        padding: 2em 1em; /* Ajuste de padding */
+      }
+
+      h2 {
+        font-size: 1.6em; /* Reducir aún más el tamaño de los títulos */
+      }
+
+      p {
+        font-size: 1em; /* Reducir tamaño de texto */
+      }
+
+      button {
+        font-size: 0.9em; /* Reducir el tamaño del botón */
+        padding: 6px 14px; /* Ajustar tamaño del botón */
+      }
     }
   </style>
 </head>
