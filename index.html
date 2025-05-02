@@ -1,98 +1,179 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Anémona</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			body {
-				background-color: #FBF6E5;
-				color: #333;
-			}
-			#sidebar .logo img {
-				width: 120px;
-				height: auto;
-				margin-bottom: 1em;
-			}
-			a.button.primary {
-				background-color: #EE3569;
-				border-color: #EE3569;
-			}
-			a.button.primary:hover {
-				background-color: #EA5E28;
-				border-color: #EA5E28;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-		<!-- Sidebar -->
-		<section id="sidebar">
-			<div class="inner">
-				<div class="logo"><img src="anemona-logo.png" alt="Anémona Logo"></div>
-				<nav>
-					<ul>
-						<li><a href="#intro">Inicio</a></li>
-						<li><a href="#one">Nosotras</a></li>
-						<li><a href="#two">Artistas</a></li>
-						<li><a href="#three">Contacto</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anémona</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    @font-face {
+      font-family: 'PPNeueMontreal-Medium';
+      src: url('PPNeueMontreal-Medium.otf') format('opentype');
+    }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'PPNeueMontreal-Medium', sans-serif;
+      background-color: #FBF6E5;
+      color: #333;
+    }
 
-			<!-- Intro -->
-			<section id="intro" class="wrapper style1 fullscreen fade-up">
-				<div class="inner">
-					<h1>Anémona</h1>
-					<p>Sumerge tu música en un nuevo mundo de oportunidades. Somos la primera agencia de sincronización musical en México operada desde cualquier lugar del mundo.</p>
-				</div>
-			</section>
+    header {
+      background-color: #EE3569;
+      padding: 8em 2em 2em; /* Ajuste del padding para balancear la vista */
+      text-align: center;
+      color: white;
+      height: 50vh; /* Ajuste en la altura para un intermedio entre móvil y escritorio */
+    }
 
-			<!-- One -->
-			<section id="one" class="wrapper style2 spotlights">
-				<section>
-					<div class="content">
-						<div class="inner">
-							<h2>Nuestra visión</h2>
-							<p>Empoderamos a artistas y facilitamos licencias musicales justas, creativas y estratégicas para medios audiovisuales. Queremos democratizar la música.</p>
-						</div>
-					</div>
-				</section>
-			</section>
+    header img {
+      width: 50%;
+      height: auto;
+    }
 
-			<!-- Two -->
-			<section id="two" class="wrapper style3 fade-up">
-				<div class="inner">
-					<h2>Artistas que representamos</h2>
-					<p>Estamos construyendo un roster de talento fresco y potente. Pronto podrás conocer a nuestros artistas.</p>
-				</div>
-			</section>
+    section {
+      padding: 5em 2em;
+      max-width: 900px;
+      margin: auto;
+    }
 
-			<!-- Three -->
-			<section id="three" class="wrapper style1 fade-up">
-				<div class="inner">
-					<h2>¿Eres artista independiente o trabajas en medios audiovisuales?</h2>
-					<p>Nos encantaría hablar contigo.</p>
-					<ul class="actions">
-						<li><a href="formulario.html" class="button primary">Únete ahora</a></li>
-					</ul>
-					<p>Contacto: <a href="mailto:katearaos@anemonasync.com">katearaos@anemonasync.com</a></p>
-				</div>
-			</section>
+    .divider {
+      background-color: #f8c9d6;
+      border-radius: 24px;
+      padding: 4em 3em;
+      margin: 5em auto;
+    }
 
-		</div>
+    footer {
+      text-align: center;
+      padding: 3em 2em;
+      background-color: #EE3569;
+      color: white;
+    }
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a.email {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a.email:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.8em;
+    }
+
+    button {
+      background-color: #EE3569;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    button:hover {
+      background-color: #EA5E28;
+    }
+
+    /* Media Queries para hacer la página responsiva */
+    @media (max-width: 768px) {
+      header {
+        padding: 6em 1.5em 1.5em; /* Ajuste del padding para pantallas más pequeñas */
+        height: 45vh; /* Reducir la altura para mejorar el diseño en móvil */
+      }
+
+      header img {
+        width: 70%; /* Ajustar el logo para pantallas pequeñas */
+      }
+
+      section {
+        padding: 3em 1.5em; /* Menos padding para pantallas pequeñas */
+      }
+
+      h2 {
+        font-size: 1.8em; /* Reducir el tamaño de la fuente de los títulos */
+      }
+
+      p {
+        font-size: 1.1em; /* Reducir el tamaño de la fuente del texto */
+      }
+
+      button {
+        font-size: 1em; /* Reducir el tamaño del botón */
+        padding: 8px 16px; /* Reducir el tamaño del botón */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 4em 1em 1em; /* Ajuste de padding para pantallas muy pequeñas */
+        height: 40vh; /* Reducir aún más la altura */
+      }
+
+      header img {
+        width: 80%; /* Ajustar el logo aún más pequeño */
+      }
+
+      section {
+        padding: 2em 1em; /* Ajuste de padding */
+      }
+
+      h2 {
+        font-size: 1.6em; /* Reducir aún más el tamaño de los títulos */
+      }
+
+      p {
+        font-size: 1em; /* Reducir tamaño de texto */
+      }
+
+      button {
+        font-size: 0.9em; /* Reducir el tamaño del botón */
+        padding: 6px 14px; /* Ajustar tamaño del botón */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="anemona-logo.png" alt="Anémona Logo">
+  </header>
+
+  <section class="divider">
+    <h2>Sumerge tu música en un nuevo mundo de oportunidades</h2>
+    <p>Anémona es la primera agencia de sincronización musical en México. Nuestro objetivo es empoderar a artistas y facilitar licencias musicales justas, creativas y estratégicas para medios audiovisuales, democratizando la música.</p>
+  </section>
+
+  <section class="divider">
+    <h2>Artistas que representamos</h2>
+    <p>Estamos construyendo un roster de talento fresco y potente. Pronto podrás conocer a nuestros artistas.</p>
+  </section>
+
+  <section class="divider">
+    <h2>¿Eres artista independiente o trabajas en medios audiovisuales?</h2>
+    <p>Nos encantaría hablar contigo.</p>
+    <!-- Botón para el formulario de registro de obras -->
+    <button onclick="window.location.href = './formulariodeobras.html';">Únete ahora</button>
+    <p>Contacto: <a href="mailto:katearaos@anemonasync.com" class="email">katearaos@anemonasync.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anémona. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
