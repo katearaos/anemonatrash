@@ -15,16 +15,16 @@
       margin: 0;
       padding: 0;
       font-family: 'PPNeueMontreal-Medium', sans-serif;
-      background-color: #FBF6E5;
-      color: #333;
+      background-color: #403287;
+      color: #FBF6E5;
     }
 
     header {
       background-color: #EE3569;
-      padding: 8em 2em 2em; /* Ajuste del padding para balancear la vista */
+      padding: 8em 2em 2em;
       text-align: center;
       color: white;
-      height: 50vh; /* Ajuste en la altura para un intermedio entre móvil y escritorio */
+      height: 50vh;
     }
 
     header img {
@@ -34,15 +34,20 @@
 
     section {
       padding: 5em 2em;
-      max-width: 900px;
-      margin: auto;
     }
 
     .divider {
-      background-color: #f8c9d6;
-      border-radius: 24px;
+      background-color: transparent;
+      margin: 5em 0;
+    }
+
+    .divider .inner {
+      background-color: #FBF6E5;
+      color: #333;
       padding: 4em 3em;
-      margin: 5em auto;
+      margin: 0 auto;
+      max-width: 2500px;
+      box-sizing: border-box;
     }
 
     footer {
@@ -69,6 +74,8 @@
     h2 {
       font-size: 2.2em;
       margin-bottom: 1em;
+      font-weight: 300; /* Letra más delgada */
+      text-transform: uppercase; /* Mayúsculas */
     }
 
     p {
@@ -91,60 +98,64 @@
       background-color: #EA5E28;
     }
 
-    /* Media Queries para hacer la página responsiva */
+    /* Responsivo */
     @media (max-width: 768px) {
       header {
-        padding: 6em 1.5em 1.5em; /* Ajuste del padding para pantallas más pequeñas */
-        height: 45vh; /* Reducir la altura para mejorar el diseño en móvil */
+        padding: 6em 1.5em 1.5em;
+        height: 45vh;
       }
 
       header img {
-        width: 70%; /* Ajustar el logo para pantallas pequeñas */
+        width: 70%;
       }
 
-      section {
-        padding: 3em 1.5em; /* Menos padding para pantallas pequeñas */
+      .divider .inner {
+        padding: 3em 2em;
       }
 
       h2 {
-        font-size: 1.8em; /* Reducir el tamaño de la fuente de los títulos */
+        font-size: 1.8em;
+        font-weight: 300; /* Más delgado */
+        text-transform: uppercase; /* Mayúsculas */
       }
 
       p {
-        font-size: 1.1em; /* Reducir el tamaño de la fuente del texto */
+        font-size: 1.1em;
       }
 
       button {
-        font-size: 1em; /* Reducir el tamaño del botón */
-        padding: 8px 16px; /* Reducir el tamaño del botón */
+        font-size: 1em;
+        padding: 8px 16px;
       }
     }
 
     @media (max-width: 480px) {
       header {
-        padding: 4em 1em 1em; /* Ajuste de padding para pantallas muy pequeñas */
-        height: 40vh; /* Reducir aún más la altura */
+        padding: 4em 1em 1em;
+        height: 40vh;
       }
 
       header img {
-        width: 80%; /* Ajustar el logo aún más pequeño */
+        width: 80%;
       }
 
-      section {
-        padding: 2em 1em; /* Ajuste de padding */
+      .divider .inner {
+        padding: 2.5em 1.5em;
       }
 
       h2 {
-        font-size: 1.6em; /* Reducir aún más el tamaño de los títulos */
+        font-size: 1.6em;
+        font-weight: 300; /* Más delgado */
+        text-transform: uppercase; /* Mayúsculas */
       }
 
       p {
-        font-size: 1em; /* Reducir tamaño de texto */
+        font-size: 1em;
       }
 
       button {
-        font-size: 0.9em; /* Reducir el tamaño del botón */
-        padding: 6px 14px; /* Ajustar tamaño del botón */
+        font-size: 0.9em;
+        padding: 6px 14px;
       }
     }
   </style>
@@ -155,21 +166,26 @@
   </header>
 
   <section class="divider">
-    <h2>Sumerge tu música en un nuevo mundo de oportunidades</h2>
-    <p>Anémona es la primera agencia de sincronización musical en México. Nuestro objetivo es empoderar a artistas y facilitar licencias musicales justas, creativas y estratégicas para medios audiovisuales, democratizando la música.</p>
+    <div class="inner">
+      <h2>Sumerge tu música en un nuevo mundo de oportunidades</h2>
+      <p>Anémona es la primera agencia de sincronización musical en México. Nuestro objetivo es empoderar a artistas y facilitar licencias musicales justas, creativas y estratégicas para medios audiovisuales, democratizando la música.</p>
+    </div>
   </section>
 
   <section class="divider">
-    <h2>Artistas que representamos</h2>
-    <p>Estamos construyendo un roster de talento fresco y potente. Pronto podrás conocer a nuestros artistas.</p>
+    <div class="inner">
+      <h2>Artistas que representamos</h2>
+      <p>Estamos construyendo un roster de talento fresco y potente. Pronto podrás conocer a nuestros artistas.</p>
+    </div>
   </section>
 
   <section class="divider">
-    <h2>¿Eres artista independiente o trabajas en medios audiovisuales?</h2>
-    <p>Nos encantaría hablar contigo.</p>
-    <!-- Botón para el formulario de registro de obras -->
-    <button onclick="window.location.href = './formulariodeobras.html';">Únete ahora</button>
-    <p>Contacto: <a href="mailto:katearaos@anemonasync.com" class="email">katearaos@anemonasync.com</a></p>
+    <div class="inner">
+      <h2>¿Eres artista independiente o trabajas en medios audiovisuales?</h2>
+      <p>Nos encantaría hablar contigo.</p>
+      <button onclick="window.location.href = './formulariodeobras.html';">Únete ahora</button>
+      <p>Contacto: <a href="mailto:katearaos@anemonasync.com" class="email">katearaos@anemonasync.com</a></p>
+    </div>
   </section>
 
   <footer>
