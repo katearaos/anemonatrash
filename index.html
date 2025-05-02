@@ -84,17 +84,17 @@
     }
 
     button {
-      background-color: #403287; /* Color del botón cambiado */
+      background-color: #403287;
       color: white;
       border: none;
       padding: 10px 20px;
       border-radius: 8px;
-      font-weight: 300; /* Letra más delgada */
+      font-weight: 300;
       cursor: pointer;
       font-size: 1.2em;
-      text-transform: uppercase; /* Letras en mayúsculas */
+      text-transform: uppercase;
       display: block;
-      margin: 0 auto; /* Centrado del botón */
+      margin: 0 auto;
     }
 
     button:hover {
@@ -102,14 +102,14 @@
     }
 
     /* Responsivo */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       header {
-        padding: 6em 1.5em 1.5em;
+        padding: 6em 2em 2em;
         height: 45vh;
       }
 
       header img {
-        width: 70%;
+        width: 60%;
       }
 
       .divider .inner {
@@ -124,6 +124,36 @@
 
       p {
         font-size: 1.1em;
+      }
+
+      button {
+        font-size: 1.1em;
+        padding: 9px 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 5em 1.5em 1.5em;
+        height: 45vh;
+      }
+
+      header img {
+        width: 70%;
+      }
+
+      .divider .inner {
+        padding: 3em 2em;
+      }
+
+      h2 {
+        font-size: 1.7em;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1em;
       }
 
       button {
